@@ -1,10 +1,20 @@
 /*
 ==================================
-Stored Procedure to bulk load the raw data from the source csv files into the bronze layer tables
+Stored Procedure: Load bronze Layer
 ==================================
+Script Purpose:
+	Stored Procedure to bulk load the raw data from the source csv files into the bronze layer tables
+	It performs the following actions:
+	- Truncates the bronze tables before loading data.
+	- Uses the 'BULK INSERT' command to load data from csv Files to bronze tables.
 
-WARNING:
-          This script will delete the existing data in the bronze layer tables.
+Parameters:
+	None
+	It does not accept any parameters and doesn't return any values
+
+Usage Example:
+	EXEC bronze.load_bronze;
+================================================================
 */
 
 CREATE or ALTER PROCEDURE bronze.load_bronze AS
