@@ -6,6 +6,8 @@ This is a project used to expand my knowledge in data engineering.  The outcome 
 
 ---
 
+![Data Diagram](docs/SQLDataWarehouse.drawio.svg)
+
 ## Project Requirements
 
 ### Building the Data Warehouse
