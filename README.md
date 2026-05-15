@@ -1,38 +1,51 @@
 # Data Warehouse and Analytics Project
 
-Welcome to the **Data Warehouse and Analytics Project** repository.
+Welcome to the **Data Warehouse and Analytics Project** repository. This project is a hands-on exploration of data engineering best practices, focusing on building a modern data warehouse environment.
 
-This is a project used to expand my knowledge in data engineering.  The outcome will be to understand and get exposure to best practices for data engineering and analytics.  The project will build a modern data warehouse with MS SQL Server, including ETL processes, data modeling and analytics.
+## 🎯 Objective
+To develop a modern data warehouse using **MS SQL Server** that consolidates sales data from disparate sources, enabling high-quality analytical reporting and data-driven decision-making.
 
 ---
+
+## 🏗️ Architecture Overview
+The project follows a tiered data architecture to ensure data quality and traceability:
+1.  **Bronze (Staging):** Raw data ingestion from source systems.
+2.  **Silver:** Data cleansing, standardization, and quality checks.
+3.  **Gold:** Final transformed models optimized for analytics.
 
 ![Data Diagram](docs/SQLDataWarehouse.drawio.svg)
 
-## Project Requirements
+---
 
-### Building the Data Warehouse
-
-### Objective
-Develop a modern data warehouse using SQL server to consolidate sales data which will enable analytical reporting and informed decision-making.
-
-### Specifications
--**Data sources**: Import data from two source systems (ERP and CRM) as CSV files.
--**Data Quality**: Cleanse and resolve data quality issues prior to analysis.
--**Integration**: Combine both sources into a single data model designed for analysis.
--**Scope**: Focus on one dataset only. History of data not required.
--**Documentation**: Provide clear documentation of the data model to support stakeholders and data analysts
+## 🛠️ Tech Stack
+* **Database:** Microsoft SQL Server
+* **Language:** T-SQL (Stored Procedures, Views, DDL/DML)
+* **Tools:** SQL Server Management Studio (SSMS), Draw.io (Architecture Diagrams)
+* **Data Sources:** CSV files from ERP and CRM systems
 
 ---
 
-## BI: Analytics & Reporting
+## 📋 Project Requirements & Specifications
+### 1. Data Ingestion
+- [x] Import ERP source data (CSV)
+- [x] Import CRM source data (CSV)
+- [x] Set up Bronze layer tables
 
-### Objective
-Develop SQL-based analytics to deliver detailed insights into:
-- **Customer Behavior**
-- **Product Performance**
-- **Sales Trends**
+### 2. Data Transformation (Silver Layer)
+- [x] Standardize naming conventions
+- [x] Implement Data Quality (DQ) checks (Nulls, Duplicates, Range checks)
+- [ ] Handle business logic transformations
 
-These insights will allow stakeholders with business metrics to enable strategic business decisions
+### 3. Analytics & Reporting (Gold Layer)
+- [ ] Design Fact and Dimension tables (Star Schema)
+- [ ] Create analytical views for end-users
+
+---
+
+## 🚀 How to Use
+1.  **Clone the repo:** `git clone https://github.com/jmalarchik/sql-data-warehouse-project.git`
+2.  **Scripts:** Navigate to the `/scripts` folder to find the DDL for table creation and the DQ check scripts.
+3.  **Tests:** Quality assurance queries are located in the `/tests` directory.
 
 ---
 
